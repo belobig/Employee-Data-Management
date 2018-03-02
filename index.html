@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+	<title>EDM</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron text-center black">
+				<h1>Employee Data Management</h1>
+				<h3>A Comprehensive Directory of Employee Billable Hours</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="panel panel-default panel-primary">
+				<div class="panel-heading">
+					<strong>Current Employees</strong>
+				</div>
+				<div class="panel-body">
+					<table class="table" id="empTable">
+						<tr>
+							<th>Employee Name</th>
+							<th>Role</th>
+							<th>Start Date</th>
+							<th>Months Worked</th>
+							<th>Monthly Rate ($)</th>
+							<th>Total Billed ($)</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="panel panel-default panel-primary">
+				<div class="panel-heading">
+					<strong>Add Employee</strong>
+				</div>
+				<div class="panel-body">
+					<form>
+						<div class="form-group">
+							<label for="empName">Employee Name</label>
+							<input type="text" class="form-control" id="empName" placeholder="Chris Farley">
+						</div>
+						<div class="form-group">
+							<label for="empRole">Role</label>
+							<input type="email" class="form-control" id="empRole" placeholder="Brake Pad Salesman">
+						</div>
+						<div class="form-group">
+							<label for="empStDt">Start Date</label>
+							<input type="date" class="form-control" id="empStDt" placeholder="(DD/MM/YY)">
+						</div>
+						<div class="form-group">
+							<label for="empRate">Monthly Rate</label>
+							<input type="number" class="form-control" id="empRate" placeholder="$">
+						</div>
+						<button type="submit" class="btn btn-primary" id="submitInfo">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/javascript/jquery-3.3.1.js"></script>
+	<script src="assets/javascript/moment.js"></script>
+	<script src="assets/javascript/emd.js"></script>
+
+</body>
+
+</html>
